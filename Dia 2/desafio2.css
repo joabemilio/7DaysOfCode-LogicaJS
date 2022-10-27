@@ -10,4 +10,30 @@
   margin: 0 15px;
 }
 
+.dados li p {
+  margin: 4px;
+}
 
+.dados input {
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.linguagem {
+  width: 90%;
+}
+
+.dados button {
+  padding: 10px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  margin: 20px 0;
+  background: #56FFF5;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.dados button:hover {
+  background: #4AD9D1;
+}
