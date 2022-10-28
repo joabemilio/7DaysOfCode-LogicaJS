@@ -14,7 +14,7 @@
   margin: 4px;
 }
 
-.dados input {
+.dados input, .campo-resposta {
   padding: 10px;
   font-size: 0.9rem;
 }
@@ -23,7 +23,7 @@
   width: 90%;
 }
 
-.dados button {
+.dados button, .botao-resposta {
   padding: 10px;
   font-weight: bold;
   font-family: 'Open Sans', sans-serif;
@@ -36,4 +36,11 @@
 
 .dados button:hover {
   background: #4AD9D1;
+}
+
+.oculto {
+  text-align: center;
+  font-weight: 400;
+  width: 70%;
+  margin: 0px auto;
 }
