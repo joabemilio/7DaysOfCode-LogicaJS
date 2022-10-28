@@ -24,3 +24,7 @@
 .botao-escolha:hover {
   background: rgb(0, 128, 255);
 }
+
+.oculto {
+  display: none;
+}
