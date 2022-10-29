@@ -28,3 +28,23 @@
 .oculto {
   display: none;
 }
+
+.caixa-texto {
+  font-weight: bold;
+  color: black;
+  background-color: #fff;
+}
+
+.caixa-texto:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.resposta-final {
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  background: rgb(225, 211, 58);
+  margin: 20px 0;
+}
