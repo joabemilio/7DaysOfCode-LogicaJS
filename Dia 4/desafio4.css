@@ -1,0 +1,28 @@
+.descricao {
+  font-style: italic;
+  color: #fff;
+  font-size: 1.05em;
+}
+
+.caixa-digitacao-numero::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+}
+
+.caixa-digitacao-numero {
+  margin-top: 20px;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 70px;
+  width: 5%;
+  background: rgb(54, 54, 54);
+  color:rgb(254, 248, 62);
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.caixa-digitacao-numero:focus {
+  box-shadow: 0 0 0 0;
+  outline: none;
+}

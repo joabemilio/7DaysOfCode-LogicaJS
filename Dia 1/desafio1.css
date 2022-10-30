@@ -46,3 +46,20 @@ p {
   margin: 20px 0;
   font-size: 1.1em;
 }
+
+.botao-escolha {
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 1em;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  color:#fff;
+  background: rgb(85, 0, 255);
+  cursor: pointer;
+  margin-right: 30px;
+  transition: background 0.3s;
+}
+
+.botao-escolha:hover {
+  background: rgb(0, 128, 255);
+}
