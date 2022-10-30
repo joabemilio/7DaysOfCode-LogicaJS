@@ -21,7 +21,6 @@
   display: grid;
   margin: 1.3rem auto;
   width: 30vw;
-  place-items: center;
   grid-template-columns: 2fr 2fr;
   gap: 1rem;
 }

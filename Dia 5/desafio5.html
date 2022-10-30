@@ -22,18 +22,20 @@
     <button class="botao-escolha btn-inicial">sim</button><button class="botao-escolha btn-inicial">não</button>
   </div>
 
-  <div class="caixa oculto">
+  <div id="campo-lista" class="caixa oculto">
     <h2 class="titulo-pergunta">Digite o item que deseja adicionar e em qual categoria se encaixa.</h2>
-    <input type="text" class="campo-digitacao">
+    <input type="text" id="campo-digitacao" class="campo-digitacao">
     <div class="caixa-botoes">
       <button class="botao-escolha btn-categoria">Laticínios</button>
       <button class="botao-escolha btn-categoria">Vegetal / Fruta</button>
-      <button class="botao-escolha btn-categoria">Não perecível</button>
       <button class="botao-escolha btn-categoria">Congelados</button>
+      <button class="botao-escolha btn-categoria">Não perecível</button>
       <button class="botao-escolha btn-categoria">Utensílios de casa</button>
       <button class="botao-escolha btn-categoria">Outros</button>
     </div>
-      <p style="font-style: italic">Confirme todos os itens clicando na primeira opção 'NÃO' na parte superior</p>
+      <p style="font-style: italic">Confira sua lista completa clicando na primeira opção 'NÃO' na parte superior</p>
+
+      <p id="confirmacao-adicao-item" style="color: red"></p>
   </div>
 
   <script src="desafio5.js"></script>
