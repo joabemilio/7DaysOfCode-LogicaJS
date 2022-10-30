@@ -1,0 +1,27 @@
+.btn-inicial {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.oculto {
+  display: none;
+}
+
+.campo-digitacao {
+  padding: 15px;
+  font-size: 1.05em;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  background: #222;
+  color: rgb(58, 140, 255);
+}
+
+.caixa-botoes {
+  display: grid;
+  margin: 1.3rem auto;
+  width: 30vw;
+  place-items: center;
+  grid-template-columns: 2fr 2fr;
+  gap: 1rem;
+}
