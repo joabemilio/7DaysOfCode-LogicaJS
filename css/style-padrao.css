@@ -1,0 +1,65 @@
+/* aqui estão todos os estilos css presentes nos documentos HTML */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+/* reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: rgba(90, 40, 300, 0.5)
+}
+
+/* informação inicial / textos */
+
+.infomacoes, .resultado {
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.informacoes h1 {
+  margin-bottom: 20px;
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.titulo-pergunta {
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+/* caixas e botoes */
+
+.caixa {
+  text-align: center;
+  width: 100vw;
+}
+
+.botao-escolha {
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 1em;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  color:#fff;
+  background: rgb(85, 0, 255);
+  cursor: pointer;
+  margin-right: 30px;
+  transition: background 0.3s;
+}
+
+.botao-escolha:hover {
+  background: rgb(0, 128, 255);
+}
