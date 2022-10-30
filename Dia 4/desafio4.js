@@ -10,7 +10,10 @@ const elementoInvalidacao = document.getElementById('invalidacao');
 let tentativas = 0;
 
 function verificaNumero() {
-  if (elementoNumeroSugerido.value == numeroAleatorio) {
+
+  if(elementoNumeroSugerido.value < 0 || elementoNumeroSugerido.value >= 11) {
+    elementoResultado.innerHTML = "<p class='apresentacao'>O número que você digitou não é válido. Por favor, tente novamente</p>"  
+  } else if (elementoNumeroSugerido.value == numeroAleatorio) {
     elementoResultado.innerHTML = "<p class='apresentacao'>Parabéns! Você acertou. O número secreto é "+ numeroAleatorio +".</p>"
   } else {
     tentativas++;
@@ -24,9 +27,7 @@ function verificaNumero() {
     
   }
 
-  if(elementoNumeroSugerido.value < 0 || elementoNumeroSugerido.value >= 11) {
-    elementoInvalidacao.innerHTML = "<p class='apresentacao'>O número que você digitou não é válido. Por favor, tente novamente</p>"  
-  }
+  
 }
 
 
