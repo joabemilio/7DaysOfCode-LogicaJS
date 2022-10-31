@@ -3,6 +3,10 @@
   text-transform: uppercase;
 }
 
+span {
+  text-transform: uppercase;
+}
+
 .oculto {
   display: none;
 }
