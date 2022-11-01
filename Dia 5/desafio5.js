@@ -27,18 +27,12 @@ let NPerecivel = [];
 let UtenCasa = [];
 let Outros = [];
 
-let lista = [Laticinios, VegFruta, Congelados, NPerecivel, UtenCasa, Outros];
+let listaDeCategorias = [Laticinios, VegFruta, Congelados, NPerecivel, UtenCasa, Outros];
 
-function adicionaItem(indice) {
-
-    lista[indice].push(elementoCampoDigitacao.value);
-
-}
 
 for (i = 0; i < listaBtnCategorias.length; i++) {
   listaBtnCategorias[i].onclick = function () {
-    adicionaItem(i);
-
+    listaDeCategorias[i].push(" " + elementoCampoDigitacao.value);
     elementoConfirmaAdicao.innerHTML = "O item " + elementoCampoDigitacao.value + " foi adicionado com êxito."
   }
 }
@@ -51,5 +45,5 @@ btnCONFIRMA.onclick = function () {
   elementoCampoLista.classList.add('oculto');
   elementoListaCompleta.classList.remove('oculto');
 
-  elementoListaCompleta.innerHTML = "<h2 class='titulo-pergunta'>Esta é a sua lista de compras:</h2><ul> <li>Laticínios: "+ lista[0] +".</li> <li>Vegetais e Frutas: " + lista[1] + ".</li> <li>Congelados: " + lista[2] + ".</li> <li>Não perecíveis: " + lista[3] + ".</li> <li>Utensílios de casa: " + lista[4] + ".</li> <li>Outros: " + lista[5] + ".</li> </ul>"
+  elementoListaCompleta.innerHTML = "<h2 class='titulo-pergunta'>Esta é a sua lista de compras:</h2><ul class='lista-final'> <li>Laticínios: " + listaDeCategorias[0] + ".</li> <li>Vegetais e Frutas: " + listaDeCategorias[1] + ".</li> <li>Congelados: " + listaDeCategorias[2] + ".</li> <li>Não perecíveis: " + listaDeCategorias[3] + ".</li> <li>Utensílios de casa: " + listaDeCategorias[4] + ".</li> <li>Outros: " + listaDeCategorias[5] + ".</li> </ul>"
 }

@@ -28,3 +28,8 @@ span {
   grid-template-columns: 2fr 2fr;
   gap: 1rem;
 }
+
+.lista-final {
+  display: grid;
+  gap: 10px;
+}
