@@ -28,14 +28,15 @@ let UtenCasa = [];
 let Outros = [];
 
 let listaDeCategorias = [Laticinios, VegFruta, Congelados, NPerecivel, UtenCasa, Outros];
-
+var indiceLista;
 
 for (i = 0; i < listaBtnCategorias.length; i++) {
   listaBtnCategorias[i].onclick = function () {
-    listaDeCategorias[i].push(" " + elementoCampoDigitacao.value);
+    listaDeCategorias[i].push(" " + elementoCampoDigitacao.value)
     elementoConfirmaAdicao.innerHTML = "O item " + elementoCampoDigitacao.value + " foi adicionado com êxito."
   }
 }
+
 
 // apresentação de resultado = clique 'NÃO'
 
