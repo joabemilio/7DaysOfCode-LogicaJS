@@ -14,9 +14,11 @@ btnADD.onclick = function () {
 }
 
 btnREM.onclick = function () {
-  for(i=0; i < listaBtnCategorias; i++) {
-    listaDeCategorias[i].splice(listaDeCategorias[i].indexOf(elementoCampoDigitacao.value), 1);
+  for(i=0; i < listaDeCategorias.length; i++) {
+    listaDeCategorias[i].splice(0, listaDeCategorias[i].length);
   }
+
+  elementoConfirmaAdicao.innerHTML = "Lista vazia, pode refazê-la!"
   
 }
 

@@ -33,3 +33,13 @@ span {
   display: grid;
   gap: 10px;
 }
+
+.status {
+  font-style: italic;
+  font-size: 1.1rem; 
+  font-weight: bold; 
+  color: rgb(58, 255, 110); 
+  background: #222;
+  margin-top: 1%;
+  padding: 2px;
+}
