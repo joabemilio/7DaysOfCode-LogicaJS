@@ -16,6 +16,33 @@ class Calculator {
     this.limpar();
   }
 
+  formatarNumero(numero) {
+    const stringNumero = numero.toString();
+
+    const digitosInteiros = parseFloat(stringNumero.split('.')[0]);
+    const digitosDecimais = stringNumero.split('.')[1];
+
+    let displayInteiros;
+
+    if (isNaN(digitosInteiros)) {
+      displayInteiros = '';
+    } else {
+      displayInteiros = digitosInteiros.toLocaleString('en', {
+        maximumFractionDigits: 0
+      })
+    }
+
+    if (digitosDecimais != null) {
+      return `${displayInteiros}.${digitosDecimais}`;
+    } else {
+      return displayInteiros;
+    }
+  }
+
+  deletar() {
+    this.currentOperand = this.currentOperand.toString().slice(0, -1)
+  }
+
   calcular() {
     let resultado;
 
@@ -51,6 +78,8 @@ class Calculator {
   }
 
   addOperacao(operador) {
+    if (this.currentOperand === '') return
+
     if (this.previousOperand !== '') {
       this.calcular();
     }
@@ -62,7 +91,7 @@ class Calculator {
   }
 
   addNumero(numero) {
-    if (this.currentOperand.includes(".") && numero === '.') return;
+    if (this.currentOperand.includes(".") && numero === ".") return;
 
     this.currentOperand = `${this.currentOperand}${numero.toString()}`;
   }
@@ -74,8 +103,8 @@ class Calculator {
   }
 
   atualizarDisplay() {
-    this.previousOperandTexto.innerText = `${this.previousOperand} ${this.operador || ''}`;
-    this.currentOperandTexto.innerText = this.currentOperand;
+    this.previousOperandTexto.innerText = `${this.formatarNumero(this.previousOperand)} ${this.operador || ''}`;
+    this.currentOperandTexto.innerText = this.formatarNumero(this.currentOperand);
   }
 }
 
@@ -105,5 +134,10 @@ botaoLimpar.addEventListener("click", () => {
 
 botaoIgual.addEventListener('click', () => {
   calculator.calcular();
+  calculator.atualizarDisplay();
+})
+
+botaoDeletar.addEventListener('click', () => {
+  calculator.deletar();
   calculator.atualizarDisplay();
 })
