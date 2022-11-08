@@ -10,11 +10,11 @@
 }
 
 body {
-  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   transition: .3s;
 }
@@ -26,31 +26,43 @@ a:hover {
 /* estilização */
 
 .logo {
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
+  color: #2af270;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 2px;
 }
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
   background-color: #23232e;
-  height: 8vh;
+  height: 100vh;
 }
 
-main {
-  background: linear-gradient(55deg, #e373f0 0, #cb68f1 16.67%, #ae5df2 33.33%, #8953f2 50%, #574cf2 66.67%, #0047f3 83.33%, #0045f3 100%) no-repeat center center;
-  background-size: cover;
-  height: 92vh;
-}
 
 .nav-list {
   list-style: none;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  justify-content: space-around;
 }
 
 .nav-list li {
   letter-spacing: 3px;
-  margin-left: 32px;
+  font-size: 24px;
+}
+
+.footer {
+  position: absolute;
+  top: 95vh;
+  right: 1vw;
+  
+}
+
+.footer a {
+  color: #2af270;
 }
