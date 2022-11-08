@@ -16,19 +16,53 @@ class Calculator {
     this.limpar();
   }
 
+  calcular() {
+    let resultado;
+
+    const previousOperandFloat = parseFloat(this.previousOperand);
+    const currentOperandFloat = parseFloat(this.currentOperand);
+
+    if (isNaN(previousOperandFloat) || isNaN(currentOperandFloat)) return
+
+    switch (this.operador) {
+      case '+':
+        resultado = previousOperandFloat + currentOperandFloat;
+        break;
+
+      case '-':
+        resultado = previousOperandFloat - currentOperandFloat;
+        break;
+
+      case '&divide':
+        resultado = previousOperandFloat / currentOperandFloat;
+        break;
+
+      case '*':
+        resultado = previousOperandFloat * currentOperandFloat;
+        break;
+
+      default:
+        return;
+    }
+
+    this.currentOperand = resultado;
+    this.operador = undefined;
+    this.previousOperand = '';
+  }
+
   addOperacao(operador) {
-    if(this.previousOperand !== '') {
+    if (this.previousOperand !== '') {
       this.calcular();
     }
 
     this.operador = operador;
 
-    this.previousOperand = `${this.currentOperand} ${this.operador}`;
+    this.previousOperand = this.currentOperand;
     this.currentOperand = '';
   }
-  
+
   addNumero(numero) {
-    if(this.currentOperand.includes(".") && numero === '.') return;
+    if (this.currentOperand.includes(".") && numero === '.') return;
 
     this.currentOperand = `${this.currentOperand}${numero.toString()}`;
   }
@@ -36,11 +70,11 @@ class Calculator {
   limpar() {
     this.currentOperand = '';
     this.previousOperand = '';
-    this.operation = undefined;
+    this.operador = undefined;
   }
 
   atualizarDisplay() {
-    this.previousOperandTexto.innerText = this.previousOperand;
+    this.previousOperandTexto.innerText = `${this.previousOperand} ${this.operador || ''}`;
     this.currentOperandTexto.innerText = this.currentOperand;
   }
 }
@@ -53,7 +87,7 @@ const calculator = new Calculator(
 for (const btnNumber of botoesNumericos) {
   btnNumber.addEventListener('click', () => {
     calculator.addNumero(btnNumber.innerText);
-    calculator.atualizarDisplay();  
+    calculator.atualizarDisplay();
   })
 }
 
@@ -68,3 +102,8 @@ botaoLimpar.addEventListener("click", () => {
   calculator.limpar();
   calculator.atualizarDisplay();
 });
+
+botaoIgual.addEventListener('click', () => {
+  calculator.calcular();
+  calculator.atualizarDisplay();
+})
