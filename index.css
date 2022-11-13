@@ -16,11 +16,12 @@ body {
 a {
   color: rgb(255, 255, 255);
   text-decoration: none;
-  transition: .3s;
+  transition: color .3s;
 }
 
 a:hover {
-  opacity: .7;
+  color: #247044;
+  opacity: .5;
 }
 
 /* estilização */
