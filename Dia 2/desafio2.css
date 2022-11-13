@@ -17,6 +17,15 @@
 .dados input, .campo-resposta {
   padding: 10px;
   font-size: 0.9rem;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.dados input:focus, .campo-resposta:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .linguagem {
@@ -34,7 +43,7 @@
   transition: background 0.2s;
 }
 
-.dados button:hover {
+.dados button:hover, .botao-resposta:hover {
   background: #4AD9D1;
 }
 
